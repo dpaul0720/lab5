@@ -1,0 +1,11 @@
+Explains how the user uses the program.
+The user uses the program by first running it, then they will be prompted to input a txt file with a preloaded unsolved sudoku board. Once properly loaded, the user may input numbers from 0-9 into the game when the program prompts the user for the row and column value. When they win the game will quit.
+
+Explains how the program works internally.
+Internally, the program is managed with a 2D vector. It is first initialized with a inputted file and then displayed. Then inside the main.cpp file, there is a while loop that runs which repeatedly asks the user to input a number into a spot. To to that, it runs a overloaded >> operator and also checks if the number is valid with multiple functions implemented in the program. Once all spots are full, the wincheck function will return a 1 and the game will exit.
+
+Explains how the program was verified.
+The program was verified by running it with different test files and playing it multiple times. The program behaved as intended all times.
+
+Text on what you think worked well, what maybe did not work as well, and a general summary of the “how” the templated Sudoku and Part2 in particular was implemented. This is effectively more detail than usual on how the program works, but from the programmer perspective.
+I think the templating worked pretty well. Once I understood the syntax, it was pretty easy to get a hang of it and implement it into my program. I still don't think vectors worked well here. I feel that I could have done this lab completely with arrays and have been fine. The templated Sudoku was implemented by putting template <typename t> before my class and every single function. It alows me to input any data type i want to into the program. Part 2 was implemented with a variety of functions. Most of them were check functions such as rowcehck colcheck squarecheck checkall and wincheck. They did what they were named to do. Each time a change happened to the board from the main.cpp file, the checks were called with checkAll and winCheck was also called every loop.
